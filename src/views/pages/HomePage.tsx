@@ -1,9 +1,6 @@
 import { cn } from "@/lib/utils.ts";
-import { Calendar } from "@/components/ui/calendar.tsx";
-import { useState } from "react";
 
 const HomePage = () => {
-  const [date, setDate] = useState<Date | undefined>(new Date());
   return (
     <main className={cn("mt-20")}>
       <section>
@@ -17,12 +14,6 @@ const HomePage = () => {
               Under construction
             </h2>
           </div>
-          <Calendar
-            mode="single"
-            selected={date}
-            onSelect={setDate}
-            className="rounded-md border shadow"
-          />
         </div>
       </section>
     </main>
