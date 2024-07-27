@@ -24,11 +24,6 @@
     --input: 240 5.9% 90%;
     --ring: 240 5.9% 10%;
     --radius: 0.5rem;
-    --chart-1: ;
-    --chart-2: ;
-    --chart-3: ;
-    --chart-4: ;
-    --chart-5: ;
   }
 
   .dark {
@@ -51,11 +46,22 @@
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
-    --chart-1: ;
-    --chart-2: ;
-    --chart-3: ;
-    --chart-4: ;
-    --chart-5: ;
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Manrope';
+    src: url('../assets/fonts/Manrope-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Manrope';
+    src: url('../assets/fonts/Manrope-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
   }
 }
 
