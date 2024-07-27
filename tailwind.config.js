@@ -14,6 +14,30 @@ export default {
     },
     extend: {
       colors: {
+        // project specific colors
+        darkblue: "#0C091D",
+        blue: "#1117B5",
+        purple: "#4F0AB1",
+        yellow: "#FFEB00",
+        lightgreen: "#8EF195",
+        green: "#67E26F",
+        darkgreen: "#219329",
+        lightgray: "#DFDFDF",
+        darkgray: "#ABABAB",
+
+        fontSize: {
+          "title": "2.375rem" /* 38px */,
+        },
+        transitionDuration: {
+          1: "1ms"
+        },
+        fontFamily: {
+          "manrope": ["Manrope", "sans-serif"],
+        },
+        backgroundImage: {
+          "background-gradient": "linear-gradient(135deg, #4F0AB1, #1117B5)",
+        },
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

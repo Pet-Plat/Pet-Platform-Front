@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils.ts";
-import { Factory } from "lucide-react";
 import { Calendar } from "@/components/ui/calendar.tsx";
 import { useState } from "react";
 
@@ -14,10 +13,9 @@ const HomePage = () => {
           }
         >
           <div className="flex items-center gap-4">
-            <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+            <h2 className="scroll-m-20 border-b pb-20 text-title tracking-tight first:mt-0">
               Under construction
             </h2>
-            <Factory className={"w-10 h-10"} />
           </div>
           <Calendar
             mode="single"
