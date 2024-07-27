@@ -4,6 +4,18 @@
 
 @layer base {
   :root {
+    /* project colors */
+    --darkblue: #0C091D;
+    --blue: #1117B5;
+    --purple: #4F0AB1;
+    --yellow: #FFEB00;
+    --lightgreen: #8EF195;
+    --green: #67E26F;
+    --darkgreen: #219329;
+    --lightgray: #DFDFDF;
+    --darkgray: #ABABAB;
+    --blob-gradient: linear-gradient(135deg, #4F0AB1, #1117B5);
+
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;

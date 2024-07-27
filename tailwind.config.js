@@ -10,7 +10,7 @@ export default {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1366px",
       },
     },
     screens: {
@@ -20,28 +20,15 @@ export default {
     extend: {
       colors: {
         // project specific colors
-        darkblue: "#0C091D",
-        blue: "#1117B5",
-        purple: "#4F0AB1",
-        yellow: "#FFEB00",
-        lightgreen: "#8EF195",
-        green: "#67E26F",
-        darkgreen: "#219329",
-        lightgray: "#DFDFDF",
-        darkgray: "#ABABAB",
-
-        fontSize: {
-          "title": "2.375rem" /* 38px */,
-        },
-        transitionDuration: {
-          1: "1ms"
-        },
-        fontFamily: {
-          "manrope": ["Manrope", "sans-serif"],
-        },
-        backgroundImage: {
-          "background-gradient": "linear-gradient(135deg, #4F0AB1, #1117B5)",
-        },
+        darkblue: "var(--darkblue)",
+        blue: "var(--blue)",
+        purple: "var(--purple)",
+        yellow: "var(--yellow)",
+        lightgreen: "var(--lightgreen)",
+        green: "var(--green)",
+        darkgreen: "var(--darkgreen)",
+        lightgray: "var(--lightgray)",
+        darkgray: "var(--darkgray)",
 
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -76,6 +63,18 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      fontSize: {
+        "title": "2.375rem" /* 38px */,
+      },
+      transitionDuration: {
+        1: "1ms"
+      },
+      fontFamily: {
+        "manrope": ["Manrope", "sans-serif"],
+      },
+      backgroundImage: {
+        "blob-gradient": "var(--blob-gradient)",
       },
       borderRadius: {
         lg: "var(--radius)",
