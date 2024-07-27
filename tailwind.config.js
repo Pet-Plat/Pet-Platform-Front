@@ -1,4 +1,5 @@
 import tailwindAnimate from "tailwindcss-animate";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -9,11 +10,26 @@ export default {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1366px",
       },
+    },
+    screens: {
+      "xs": "375px",
+      ...defaultTheme.screens,
     },
     extend: {
       colors: {
+        // project specific colors
+        darkblue: "var(--darkblue)",
+        blue: "var(--blue)",
+        purple: "var(--purple)",
+        yellow: "var(--yellow)",
+        lightgreen: "var(--lightgreen)",
+        green: "var(--green)",
+        darkgreen: "var(--darkgreen)",
+        lightgray: "var(--lightgray)",
+        darkgray: "var(--darkgray)",
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -47,6 +63,18 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      fontSize: {
+        "4xl": ["2.375rem", "2.625rem"] /* 38px, 42px */,
+      },
+      transitionDuration: {
+        1: "1ms"
+      },
+      fontFamily: {
+        "manrope": ["Manrope", "sans-serif"],
+      },
+      backgroundImage: {
+        "blob-gradient": "var(--blob-gradient)",
       },
       borderRadius: {
         lg: "var(--radius)",
