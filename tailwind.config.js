@@ -65,7 +65,7 @@ export default {
         },
       },
       fontSize: {
-        "title": "2.375rem" /* 38px */,
+        "4xl": ["2.375rem", "2.625rem"] /* 38px, 42px */,
       },
       transitionDuration: {
         1: "1ms"

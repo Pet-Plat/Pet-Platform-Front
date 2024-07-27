@@ -13,7 +13,7 @@ const HomePage = () => {
           }
         >
           <div className="flex items-center gap-4">
-            <h2 className="scroll-m-20 border-b pb-20 tracking-tight first:mt-0">
+            <h2 className="scroll-m-20 border-b pb-20 tracking-tight first:mt-0 text-4xl">
               Under construction
             </h2>
           </div>
