@@ -1,4 +1,5 @@
 import tailwindAnimate from "tailwindcss-animate";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -11,6 +12,10 @@ export default {
       screens: {
         "2xl": "1400px",
       },
+    },
+    screens: {
+      "xs": "375px",
+      ...defaultTheme.screens,
     },
     extend: {
       colors: {
