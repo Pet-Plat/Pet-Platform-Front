@@ -8,9 +8,9 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1.25rem" /* 20px */,
       screens: {
-        "2xl": "1366px",
+        "2xl": "1263px" /* yields content width of 1223px */,
       },
     },
     screens: {
@@ -65,6 +65,7 @@ export default {
         },
       },
       fontSize: {
+        "3xl": ["1.75rem", "2.125rem"] /* 28px, 34px */,
         "4xl": ["2.375rem", "2.625rem"] /* 38px, 42px */,
       },
       transitionDuration: {
