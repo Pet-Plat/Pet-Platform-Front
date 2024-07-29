@@ -77,6 +77,13 @@ export default {
       backgroundImage: {
         "blob-gradient": "var(--blob-gradient)",
       },
+      flex: {
+        "2": "2 2 0%",
+        "3": "3 3 0%",
+        "4": "4 4 0%",
+        "5": "5 5 0%",
+      },
+
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
