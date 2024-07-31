@@ -1,11 +1,12 @@
 import React from "react";
 import HowItWorksCard from "@/components/landing/how-it-works/HowItWorksCard.tsx";
+import {cn} from "@/lib/utils.ts";
 
 
 // TODO: set type
-export default function HowItWorksSection() {
+export default function HowItWorksSection({ className }: { className?: string }) {
     return (
-        <div className="mb-36">
+        <div className={cn(className)}>
             <h2 className="container mb-8">Как это работает</h2>
 
             <div className="overflow-auto flex gap-4 px-5 md:container md:gap-6 md:flex-col">
