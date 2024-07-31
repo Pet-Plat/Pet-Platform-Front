@@ -21,6 +21,7 @@ export default {
       colors: {
         // project specific colors
         darkblue: "var(--darkblue)",
+        darkPurpleBlue: "var(--dark-purple-blue)",
         blue: "var(--blue)",
         purple: "var(--purple)",
         yellow: "var(--yellow)",
@@ -64,6 +65,9 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      margin: {
+        18: "4.5rem",
+      },
       fontSize: {
         "3xl": ["1.75rem", "2.125rem"] /* 28px, 34px */,
         "4xl": ["2.375rem", "2.625rem"] /* 38px, 42px */,
@@ -82,6 +86,12 @@ export default {
         "3": "3 3 0%",
         "4": "4 4 0%",
         "5": "5 5 0%",
+      },
+      boxShadow: {
+        'pet-project-card': 'inset 0 0 68px rgba(255, 255, 255, 0.05), inset 0 4px 4px rgba(255, 255, 255, 0.15)',
+      },
+      backdropBlur: {
+        'pet-project-card': 'blur(48px)'
       },
 
       borderRadius: {
