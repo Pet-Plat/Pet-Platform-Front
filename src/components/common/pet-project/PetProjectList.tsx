@@ -11,8 +11,9 @@ interface PetProjectListProps {
 
 const PetProjectList: React.FC<PetProjectListProps> = ({ className, data }) => (
     <div className={cn(
-        "container items-center flex flex-col gap-4",
-        "overflow-auto md:gap-6 md:flex-row md:items-stretch",
+        "container items-center overflow-auto flex flex-col gap-4",
+        "md:gap-6 md:flex-row md:items-stretch",
+        "xl:flex-wrap xl:justify-center",
         className,
     )}>
         {
