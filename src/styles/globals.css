@@ -84,8 +84,18 @@
   * {
     @apply border-border;
   }
+  html,
+  body {
+    @apply min-h-screen h-auto;
+  }
+  html {
+    @apply scroll-smooth;
+  }
   body {
     @apply font-manrope bg-darkblue text-white text-foreground;
+    @apply bg-background text-foreground;
+    @apply flex flex-col;
+    @apply overflow-x-hidden overflow-y-auto;
   }
   h1,
   h2 {
