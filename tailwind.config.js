@@ -67,6 +67,7 @@ export default {
       },
       margin: {
         18: "4.5rem",
+        30: "7.5rem",
       },
       fontSize: {
         "3xl": ["1.75rem", "2.125rem"] /* 28px, 34px */,
@@ -92,6 +93,14 @@ export default {
       },
       backdropBlur: {
         'pet-project-card': 'blur(48px)'
+      },
+      minWidth: {
+        // used for pet project cards
+        124: "31rem", /* 496px */
+      },
+      minHeight: {
+        // used for pet project cards
+        106: "26.5rem", /* 424px */
       },
 
       borderRadius: {
