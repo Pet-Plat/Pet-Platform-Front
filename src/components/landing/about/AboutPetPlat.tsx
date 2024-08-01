@@ -24,9 +24,7 @@ const AboutPetPlat = () => {
           Поможем найти проекты, объединиться в команды <br /> и карьерно расти
           при поддержке менторов.
         </p>
-        <button className={"main-button w-full lg:w-auto"}>
-          Выбрать проект
-        </button>
+        <button className={"main-button mt-2"}>Выбрать проект</button>
       </div>
       <img
         src={"/glows/landing/RightGlow.svg"}

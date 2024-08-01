@@ -102,10 +102,10 @@
     @apply font-bold text-3xl md:text-4xl mb-8;
   }
   h3 {
-    @apply font-bold text-2xl;
+    @apply font-bold lg:text-2xl text-base;
   }
   p {
-    @apply font-light text-xl;
+    @apply font-light lg:text-xl text-lg;
   }
   main {
     & > section {
@@ -116,7 +116,7 @@
 
 @layer components {
   .main-button {
-    @apply p-2 pl-6 pr-6 bg-green max-w-max text-black rounded-full cursor-pointer hover:bg-[#8EF195] duration-300;
+    @apply p-2 pl-6 pr-6 bg-green lg:max-w-max text-black rounded-full cursor-pointer hover:bg-[#8EF195] duration-300;
   }
 
   .link-hover-underline {

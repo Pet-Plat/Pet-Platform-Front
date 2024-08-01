@@ -18,6 +18,7 @@
     "tests": "npx playwright test"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-slot": "^1.0.2",
     "antd": "^5.19.4",
     "class-variance-authority": "^0.6.0",

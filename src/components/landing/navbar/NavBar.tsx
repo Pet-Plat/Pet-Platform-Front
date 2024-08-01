@@ -1,5 +1,13 @@
 import { navBarLinks } from "@/data/links.ts";
 import { cn } from "@/lib/utils.ts";
+import { Menu } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/custom/sheet.landing.tsx";
 
 const NavBar = () => {
   const signButton =
@@ -23,13 +31,40 @@ const NavBar = () => {
             </div>
           ))}
         </div>
-        <div className={"flex gap-5"}>
+        <div className={"flex gap-5 items-center"}>
           <button className={cn(signButton, "hidden lg:block")}>
             Зарегистрироваться
           </button>
           <button className={cn(signButton, "text-black bg-white")}>
             Войти
           </button>
+          <Sheet>
+            <SheetTrigger asChild>
+              <Menu className={"w-8 h-8 lg:hidden cursor-pointer"} />
+            </SheetTrigger>
+            <SheetContent side="top">
+              <SheetHeader>
+                <SheetTitle className={"flex gap-3 items-center"}>
+                  <div
+                    className={
+                      "w-12 h-12 bg-green rounded-md flex justify-center"
+                    }
+                  >
+                    <img
+                      src={"/logo/logo.png"}
+                      className={"aspect-square object-contain"}
+                    />
+                  </div>
+                  Pet-Plat
+                </SheetTitle>
+              </SheetHeader>
+              <div className={"flex flex-col gap-8 mt-5"}>
+                {navBarLinks.map((link) => (
+                  <a className={"font-bold text-lg"}>{link.name}</a>
+                ))}
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </div>
