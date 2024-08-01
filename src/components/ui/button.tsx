@@ -12,9 +12,9 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: cn(
-            "bg-green hover:bg-darkgreen active:bg-lightgreen",
-            "text-darkblue  duration-1 rounded-full px-4 py-[9.5px]",
-            "max-w-[335px] w-full md:max-w-none md:w-auto",
+          "bg-green hover:bg-darkgreen active:bg-lightgreen",
+          "text-darkblue  duration-1 rounded-full px-4 py-[9.5px]",
+          "max-w-[335px] w-full md:max-w-none md:w-auto",
         ),
         // TODO: re-style other variants
         destructive:

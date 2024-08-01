@@ -14,7 +14,7 @@ export default {
       },
     },
     screens: {
-      "xs": "375px",
+      xs: "375px",
       ...defaultTheme.screens,
     },
     extend: {
@@ -74,33 +74,34 @@ export default {
         "4xl": ["2.375rem", "2.625rem"] /* 38px, 42px */,
       },
       transitionDuration: {
-        1: "1ms"
+        1: "1ms",
       },
       fontFamily: {
-        "manrope": ["Manrope", "sans-serif"],
+        manrope: ["Manrope", "sans-serif"],
       },
       backgroundImage: {
         "blob-gradient": "var(--blob-gradient)",
       },
       flex: {
-        "2": "2 2 0%",
-        "3": "3 3 0%",
-        "4": "4 4 0%",
-        "5": "5 5 0%",
+        2: "2 2 0%",
+        3: "3 3 0%",
+        4: "4 4 0%",
+        5: "5 5 0%",
       },
       boxShadow: {
-        'pet-project-card': 'inset 0 0 68px rgba(255, 255, 255, 0.05), inset 0 4px 4px rgba(255, 255, 255, 0.15)',
+        "pet-project-card":
+          "inset 0 0 68px rgba(255, 255, 255, 0.05), inset 0 4px 4px rgba(255, 255, 255, 0.15)",
       },
       backdropBlur: {
-        'pet-project-card': 'blur(48px)'
+        "pet-project-card": "blur(48px)",
       },
       minWidth: {
         // used for pet project cards
-        124: "31rem", /* 496px */
+        124: "31rem" /* 496px */,
       },
       minHeight: {
         // used for pet project cards
-        106: "26.5rem", /* 424px */
+        106: "26.5rem" /* 424px */,
       },
 
       borderRadius: {
