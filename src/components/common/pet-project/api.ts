@@ -9,7 +9,7 @@ export enum PetProjectCardState {
 export enum PetProjectDifficulty {
     EASY,
     MEDIUM,
-    DIFFICULT,
+    HARD,
 }
 
 export interface PetProjectCardDto {
