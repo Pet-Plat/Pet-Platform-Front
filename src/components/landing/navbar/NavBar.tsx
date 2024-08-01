@@ -47,7 +47,7 @@ const NavBar = () => {
                 <SheetTitle className={"flex gap-3 items-center"}>
                   <div
                     className={
-                      "w-12 h-12 bg-green rounded-md flex justify-center"
+                      "w-12 h-12 bg-green rounded-lg flex justify-center"
                     }
                   >
                     <img
@@ -58,7 +58,7 @@ const NavBar = () => {
                   Pet-Plat
                 </SheetTitle>
               </SheetHeader>
-              <div className={"flex flex-col gap-8 mt-5"}>
+              <div className={"flex flex-col gap-8 mt-3"}>
                 {navBarLinks.map((link) => (
                   <a className={"font-bold text-lg"}>{link.name}</a>
                 ))}
