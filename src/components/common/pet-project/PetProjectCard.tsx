@@ -13,8 +13,8 @@ const PetProjectCard: React.FC<PetProjectCardProps> = ({ className, data }) => (
         "flex flex-col justify-between",
         "bg-darkPurpleBlue rounded-2xl",
         "shadow-pet-project-card backdrop-blur-pet-project-card",
-        "pl-4 pr-8 pt-4 pb-6 max-w-[335px]",
-        "md:p-6 md:min-w-124 md:min-h-106",
+        "pl-4 pr-8 pt-4 pb-6",
+        "lg:p-6 lg:min-w-124 lg:min-h-106",
         className,
     )}>
         {/** description */}
