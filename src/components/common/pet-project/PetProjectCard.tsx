@@ -20,18 +20,18 @@ const PetProjectCard: React.FC<PetProjectCardProps> = ({ className, data }) => (
         {/** description */}
         <div className="flex flex-col mb-10">
             {/** state & difficulty */}
-            <div className="flex justify-between items-center gap-4 mb-4 md:mb-6">
+            <div className="flex justify-between items-center gap-4 mb-4 sm:mb-6">
                 <div className="flex items-center gap-2 bg-white rounded-lg text-darkblue pl-3 pr-9 py-2">
                     <img src="../../../../public/icons/landing/exclamation-mark.svg" alt="exclamation-mark-icon" className="icon"/>
-                    <span className="text-sm md:text-base">{stateToString(data.state)}</span>
+                    <span className="text-sm sm:text-base">{stateToString(data.state)}</span>
                 </div>
                 <Difficulty difficulty={data.difficulty} />
             </div>
 
             {/** title & description */}
             <div>
-                <h3 className="text-lg font-bold mb-2 md:text-2xl md:mb-4">{data.name}</h3>
-                <p className="text-sm md:text-base">{data.description}</p>
+                <h3 className="text-lg font-bold mb-2 sm:text-2xl sm:mb-4">{data.name}</h3>
+                <p className="text-sm sm:text-base">{data.description}</p>
             </div>
         </div>
 
@@ -42,7 +42,7 @@ const PetProjectCard: React.FC<PetProjectCardProps> = ({ className, data }) => (
                     <span key={index} className="bg-white px-3 py-[9px] rounded-lg text-darkblue text-center">{language}</span>
                 ))}
             </div>
-            <div className="hidden md:flex md:flex-wrap md:gap-2">
+            <div className="hidden sm:flex sm:flex-wrap sm:gap-2">
                 {data.topics.map((topic: string, index: number) => (
                     <span key={index} className="bg-lightgray px-3 py-[9px] rounded-lg text-darkblue text-center">{topic}</span>
                 ))}
@@ -60,7 +60,7 @@ const Difficulty: React.FC<DifficultyDotsProps> = ({difficulty}) => {
     return (
         <div>
             {/** difficulty dots for smaller screens */}
-            <div className="flex gap-1 md:hidden">
+            <div className="flex gap-1 sm:hidden">
             <span className={cn(
                 "block rounded-full w-2 h-2",
                 "bg-yellow" /* every project is at least of EASY difficulty */,
@@ -78,7 +78,7 @@ const Difficulty: React.FC<DifficultyDotsProps> = ({difficulty}) => {
             </div>
 
             {/** difficulty label for bigger screens */}
-            <div className="hidden md:block px-3 py-[9px] bg-yellow rounded-lg">
+            <div className="hidden sm:block px-3 py-[9px] bg-yellow rounded-lg">
             <span className="text-base text-darkblue">
                 { (difficulty == PetProjectDifficulty.EASY) ? "Начальный" : "" }
                 { (difficulty == PetProjectDifficulty.MEDIUM) ? "Средний" : "" }

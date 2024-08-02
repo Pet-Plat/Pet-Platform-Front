@@ -1,4 +1,3 @@
-import React from "react";
 import { cn } from "@/lib/utils.ts";
 
 type T = { title: string; description: string, className: string }
