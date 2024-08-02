@@ -37,7 +37,16 @@ const PetProjectsSection: React.FC<PetProjectsSectionProps> = ({ className }) =>
             state: PetProjectCardState.IN_DEVELOPMENT,
             topics: ["Телеграм боты", "Парсинг"],
             languages: ["Python"],
-        }
+        },
+        {
+            id: 4,
+            name: "Игра с визуализацией нейронных сетей",
+            description: "Игра \"Змейка\" на платформе Unity, где управление персонажем осуществляется с использованием искусственного интеллекта. Кроме того, создается инструмент для визуализации нейронной сети, которая  управляет игровым персонажем.",
+            difficulty: PetProjectDifficulty.MEDIUM,
+            state: PetProjectCardState.AWAITING_CREATORS,
+            topics: ["Машинное обучение", "Разработка игр"],
+            languages: ["Python", "C++"],
+        },
     ]);
 
     return (

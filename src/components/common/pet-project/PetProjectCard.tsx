@@ -4,17 +4,18 @@ import {cn} from "@/lib/utils.ts";
 
 
 interface PetProjectCardProps {
-    // className?: string;
+    className?: string;
     data: PetProjectCardDto;
 }
 
-const PetProjectCard: React.FC<PetProjectCardProps> = ({ data }) => (
+const PetProjectCard: React.FC<PetProjectCardProps> = ({ className, data }) => (
     <div className={cn(
         "flex flex-col justify-between",
         "bg-darkPurpleBlue rounded-2xl",
         "shadow-pet-project-card backdrop-blur-pet-project-card",
         "pl-4 pr-8 pt-4 pb-6 max-w-[335px]",
-        "md:p-6 md:min-w-124 md:min-h-106"
+        "md:p-6 md:min-w-124 md:min-h-106",
+        className,
     )}>
         {/** description */}
         <div className="flex flex-col mb-10">
@@ -37,13 +38,13 @@ const PetProjectCard: React.FC<PetProjectCardProps> = ({ data }) => (
         {/** languages & topics */}
         <div className="flex flex-col gap-4">
             <div className="flex flex-wrap gap-2">
-                {data.languages.map((language: string) => (
-                    <span className="bg-white px-3 py-[9px] rounded-lg text-darkblue text-center">{language}</span>
+                {data.languages.map((language: string, index: number) => (
+                    <span key={index} className="bg-white px-3 py-[9px] rounded-lg text-darkblue text-center">{language}</span>
                 ))}
             </div>
             <div className="hidden md:flex md:flex-wrap md:gap-2">
-                {data.topics.map((topic: string) => (
-                    <span className="bg-lightgray px-3 py-[9px] rounded-lg text-darkblue text-center">{topic}</span>
+                {data.topics.map((topic: string, index: number) => (
+                    <span key={index} className="bg-lightgray px-3 py-[9px] rounded-lg text-darkblue text-center">{topic}</span>
                 ))}
             </div>
         </div>
@@ -55,34 +56,38 @@ interface DifficultyDotsProps {
     difficulty: PetProjectDifficulty;
 }
 
-const Difficulty: React.FC<DifficultyDotsProps> = ({difficulty}) => (
-    <div>
-        {/** difficulty dots for smaller screens */}
-        <div className="flex gap-1 md:hidden">
+const Difficulty: React.FC<DifficultyDotsProps> = ({difficulty}) => {
+    return (
+        <div>
+            {/** difficulty dots for smaller screens */}
+            <div className="flex gap-1 md:hidden">
             <span className={cn(
                 "block rounded-full w-2 h-2",
-                (difficulty == PetProjectDifficulty.EASY) ? "bg-yellow" : "bg-white",
+                "bg-yellow" /* every project is at least of EASY difficulty */,
             )}></span>
-            <span className={cn(
-                "block rounded-full w-2 h-2",
-                (difficulty == PetProjectDifficulty.MEDIUM) ? "bg-yellow" : "bg-white",
-            )}></span>
-            <span className={cn(
-                "block rounded-full w-2 h-2",
-                (difficulty == PetProjectDifficulty.HARD) ? "bg-yellow" : "bg-white",
-            )}></span>
-        </div>
+                <span className={cn(
+                    "block rounded-full w-2 h-2",
+                    ([PetProjectDifficulty.MEDIUM, PetProjectDifficulty.HARD].some(d => difficulty === d))
+                        ? "bg-yellow"
+                        : "bg-white",
+                )}></span>
+                <span className={cn(
+                    "block rounded-full w-2 h-2",
+                    (difficulty == PetProjectDifficulty.HARD) ? "bg-yellow" : "bg-white",
+                )}></span>
+            </div>
 
-        {/** difficulty label for bigger screens */}
-        <div className="hidden md:block px-3 py-[9px] bg-yellow rounded-lg">
+            {/** difficulty label for bigger screens */}
+            <div className="hidden md:block px-3 py-[9px] bg-yellow rounded-lg">
             <span className="text-base text-darkblue">
                 { (difficulty == PetProjectDifficulty.EASY) ? "Начальный" : "" }
                 { (difficulty == PetProjectDifficulty.MEDIUM) ? "Средний" : "" }
                 { (difficulty == PetProjectDifficulty.HARD) ? "Сложный" : "" }
             </span>
+            </div>
         </div>
-    </div>
-)
+    )
+}
 
 function stateToString(state: PetProjectCardState): string {
     switch (state) {
