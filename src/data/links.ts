@@ -6,11 +6,11 @@ export interface NavBarLink {
 export const navBarLinks: NavBarLink[] = [
   {
     name: "Галерея pet-проектов",
-    link: "#",
+    link: "#petProjectsGalleryBlock",
   },
   {
     name: "Как это работает",
-    link: "#",
+    link: "#howItWorksBlock",
   },
   {
     name: "Вопросы",

@@ -60,7 +60,7 @@ const PetProjectsSection: React.FC<PetProjectsSectionProps> = ({
 
   return (
     <div className={cn(className)}>
-      <h2 className="container mb-8">Галерея pet-проектов</h2>
+      <h2 className="container mb-8" id={"petProjectsGalleryBlock"}>Галерея pet-проектов</h2>
       <PetProjectList className="mb-4 md:mb-8" data={projects} />
 
       <div className="container flex justify-center">

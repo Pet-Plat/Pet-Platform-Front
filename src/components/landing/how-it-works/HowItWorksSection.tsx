@@ -8,7 +8,7 @@ interface HowItWorksSectionProps {
 }
 
 const HowItWorksSection: React.FC<HowItWorksSectionProps> = ({ className }) => (
-  <div className={cn(className)}>
+  <div className={cn(className)} id={"howItWorksBlock"}>
     <h2 className="container mb-8">Как это работает</h2>
 
     <div className="overflow-auto flex gap-4 px-5 lg:container lg:gap-6 lg:flex-col">
