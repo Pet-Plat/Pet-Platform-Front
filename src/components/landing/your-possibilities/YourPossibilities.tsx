@@ -8,8 +8,9 @@ const YourPossibilities = () => {
     <div className={"container"}>
       <h2>Ваши возможности</h2>
       <div className={"grid grid-cols-1 gap-7 lg:grid-cols-2"}>
-        {possibilities.map((possibility) => (
+        {possibilities.map((possibility, index) => (
           <div
+            key={index}
             className={
               "bg-purple lg:p-9 p-7 lg:rounded-2xl rounded-xl flex flex-col gap-6"
             }
