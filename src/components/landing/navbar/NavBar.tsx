@@ -8,6 +8,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/custom/sheet.landing.tsx";
+import { localizeMe } from "@/hooks/localize.ts";
 
 const NavBar = () => {
   const signButton =
@@ -37,10 +38,10 @@ const NavBar = () => {
         </div>
         <div className={"flex gap-5 items-center"}>
           <button className={cn(signButton, "hidden lg:block")}>
-            Зарегистрироваться
+            {localizeMe("Registration")}
           </button>
           <button className={cn(signButton, "text-black bg-white")}>
-            Войти
+            {localizeMe("Sign-in")}
           </button>
           <Sheet>
             <SheetTrigger asChild>
@@ -78,12 +79,12 @@ const NavBar = () => {
                 </div>
                 <div className={"flex flex-col gap-6"}>
                   <button className={cn(signButton, "w-full p-3")}>
-                    Зарегистрироваться
+                    {localizeMe("Registration")}
                   </button>
                   <button
                     className={cn(signButton, "w-full p-3 text-black bg-white")}
                   >
-                    Войти
+                    {localizeMe("Sign-in")}
                   </button>
                 </div>
               </div>
