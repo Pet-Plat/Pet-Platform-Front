@@ -12,12 +12,11 @@ export const localizeMe = (data: string) => {
   if (navigator.language == "ru") {
     return translations[data];
   } else {
-    const enStr = Object.keys(translations).find((str) => str == data);
-    if (!enStr) {
+    if (!Object.keys(translations).includes(data)) {
       throw new Error(
-        "Translation module Error! String isn't in translations base",
+        `Translation module Error! '${data}' isn't in translations base`,
       );
     }
-    return enStr;
+    return data;
   }
 };

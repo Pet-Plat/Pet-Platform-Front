@@ -1,3 +1,5 @@
+import { MainButton } from "@/components/ui/custom/button.main.tsx";
+
 const AboutPetPlat = () => {
   return (
     <div className={"container mt-52"}>
@@ -24,7 +26,9 @@ const AboutPetPlat = () => {
           Поможем найти проекты, объединиться в команды <br /> и карьерно расти
           при поддержке менторов.
         </p>
-        <button className={"main-button mt-2"}>Выбрать проект</button>
+        <div>
+          <MainButton>Выбрать проект</MainButton>
+        </div>
       </div>
       <img
         src={"/glows/landing/RightGlow.svg"}

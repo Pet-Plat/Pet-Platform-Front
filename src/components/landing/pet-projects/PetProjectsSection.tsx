@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { cn } from "@/lib/utils.ts";
 import PetProjectList from "@/components/common/pet-project/PetProjectList.tsx";
 import {
   PetProjectCardDto,
   PetProjectCardState,
   PetProjectDifficulty,
 } from "@/components/common/pet-project/api.ts";
-import { Button } from "@/components/ui/button.tsx";
+import { MainButton } from "@/components/ui/custom/button.main.tsx";
 
 interface PetProjectsSectionProps {
   className?: string;
@@ -54,7 +53,7 @@ const PetProjectsSection: React.FC<PetProjectsSectionProps> = ({
       <PetProjectList className="mb-4 md:mb-8" data={projects} />
 
       <div className="container flex justify-center">
-        <Button>Смотреть все проекты</Button>
+        <MainButton>Смотреть все проекты</MainButton>
       </div>
     </>
   );

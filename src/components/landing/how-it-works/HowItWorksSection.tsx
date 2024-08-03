@@ -1,6 +1,5 @@
 import React from "react";
 import HowItWorksCard from "@/components/landing/how-it-works/HowItWorksCard.tsx";
-import { cn } from "@/lib/utils.ts";
 
 // TODO: make props with only className generic for all components
 interface HowItWorksSectionProps {
