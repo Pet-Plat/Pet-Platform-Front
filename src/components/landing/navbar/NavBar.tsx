@@ -12,7 +12,7 @@ import { localizeMe } from "@/hooks/localize.ts";
 
 const NavBar = () => {
   const signButton =
-    "border-[1px] border-white p-2 pl-5 pr-5 lg:p-6 lg:pt-3 lg:pb-3 rounded-full text-[1rem] hover:bg-[#999999] hover:border-[#999999] duration-500 hover:text-black ";
+    "border-[1px] border-white p-2 pl-5 pr-5 lg:p-6 lg:pt-3 lg:pb-3 rounded-full text-[1rem] hover:bg-[#999999] hover:border-[#999999] duration-150 hover:text-black ";
   return (
     <div className={"container lg:pt-12 pt-8 flex justify-between"}>
       <div className={"flex gap-3 items-center"}>

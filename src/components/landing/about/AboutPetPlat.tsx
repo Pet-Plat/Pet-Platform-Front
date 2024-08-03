@@ -5,7 +5,7 @@ const AboutPetPlat = () => {
     <div className={"container mt-52"}>
       <img
         src={"/glows/landing/LeftGlow.svg"}
-        className={"absolute -z-10 left-0 top-0  hidden lg:block w-fit"}
+        className={"absolute -z-10 left-0 top-0 hidden lg:block w-fit"}
         alt={""}
       />
       <img
