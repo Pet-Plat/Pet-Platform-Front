@@ -1,6 +1,5 @@
 import HowItWorksSection from "@/components/landing/how-it-works/HowItWorksSection.tsx";
 import PetProjectsSection from "@/components/landing/pet-projects/PetProjectsSection.tsx";
-import React from "react";
 import AboutPetPlat from "@/components/landing/about/AboutPetPlat.tsx";
 import { cn } from "@/lib/utils.ts";
 import NavBar from "@/components/landing/navbar/NavBar.tsx";

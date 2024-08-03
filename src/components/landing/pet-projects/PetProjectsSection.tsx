@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { cn } from "@/lib/utils.ts";
 import PetProjectList from "@/components/common/pet-project/PetProjectList.tsx";
 import {
   PetProjectCardDto,
@@ -45,17 +46,27 @@ const PetProjectsSection: React.FC<PetProjectsSectionProps> = ({
       topics: ["Телеграм боты", "Парсинг"],
       languages: ["Python"],
     },
+    {
+      id: 4,
+      name: "Игра с визуализацией нейронных сетей",
+      description:
+        'Игра "Змейка" на платформе Unity, где управление персонажем осуществляется с использованием искусственного интеллекта. Кроме того, создается инструмент для визуализации нейронной сети, которая  управляет игровым персонажем.',
+      difficulty: PetProjectDifficulty.MEDIUM,
+      state: PetProjectCardState.AWAITING_CREATORS,
+      topics: ["Машинное обучение", "Разработка игр"],
+      languages: ["Python", "C++"],
+    },
   ]);
 
   return (
-    <>
-      <h2 className="container">Галерея pet-проектов</h2>
+    <div className={cn(className)}>
+      <h2 className="container mb-8">Галерея pet-проектов</h2>
       <PetProjectList className="mb-4 md:mb-8" data={projects} />
 
       <div className="container flex justify-center">
         <MainButton>Смотреть все проекты</MainButton>
       </div>
-    </>
+    </div>
   );
 };
 

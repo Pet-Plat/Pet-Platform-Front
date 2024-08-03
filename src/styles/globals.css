@@ -84,25 +84,15 @@
   * {
     @apply border-border;
   }
-  html,
   body {
-    @apply min-h-screen h-auto;
+    @apply font-manrope bg-darkblue text-white text-foreground;
   }
   html {
     @apply scroll-smooth;
   }
-  body {
-    @apply font-manrope bg-darkblue text-white text-foreground;
-    @apply bg-background text-foreground;
-    @apply flex flex-col;
-    @apply overflow-x-hidden overflow-y-auto;
-  }
   h1,
   h2 {
-    @apply font-bold text-3xl md:text-4xl mb-8;
-  }
-  h3 {
-    @apply font-bold lg:text-2xl text-base;
+    @apply font-bold text-3xl sm:text-4xl mb-8;
   }
   p {
     @apply font-light lg:text-xl text-lg;
@@ -115,10 +105,6 @@
 }
 
 @layer components {
-  .main-button {
-    @apply p-2 pl-6 pr-6 bg-green lg:max-w-max text-black rounded-full cursor-pointer hover:bg-[#8EF195] duration-300;
-  }
-
   .link-hover-underline {
     position: relative;
     text-decoration: none;

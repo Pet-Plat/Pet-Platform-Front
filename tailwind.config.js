@@ -99,6 +99,10 @@ export default {
         // used for pet project cards
         124: "31rem" /* 496px */,
       },
+      maxWidth: {
+        // used for pet project cards
+        165: "41.25rem" /* 660px */,
+      },
       minHeight: {
         // used for pet project cards
         106: "26.5rem" /* 424px */,

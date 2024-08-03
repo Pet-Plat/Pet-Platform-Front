@@ -26,7 +26,7 @@ const AboutPetPlat = () => {
           Поможем найти проекты, объединиться в команды <br /> и карьерно расти
           при поддержке менторов.
         </p>
-        <div>
+        <div className={"lg:block flex justify-center"}>
           <MainButton>Выбрать проект</MainButton>
         </div>
       </div>
