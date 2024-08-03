@@ -1,4 +1,9 @@
-export const navBarLinks = [
+export interface NavBarLink {
+  name: string;
+  link: string;
+}
+
+export const navBarLinks: NavBarLink[] = [
   {
     name: "Галерея pet-проектов",
     link: "#",

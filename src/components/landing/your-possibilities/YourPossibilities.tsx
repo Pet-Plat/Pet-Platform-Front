@@ -15,14 +15,12 @@ const YourPossibilities = () => {
             }
           >
             <h3>{possibility.name}</h3>
-            <div className={cardLine}>
-              <Check />
-              {possibility.line1}
-            </div>
-            <div className={cardLine}>
-              <Check />
-              {possibility.line2}
-            </div>
+            {possibility.lines.map((line, index) => (
+              <div key={index} className={cardLine}>
+                <Check />
+                {line}
+              </div>
+            ))}
           </div>
         ))}
       </div>

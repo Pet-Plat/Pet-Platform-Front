@@ -25,10 +25,14 @@ const NavBar = () => {
       </div>
       <div className={"flex gap-5"}>
         <div className={"lg:flex gap-5 items-center hidden"}>
-          {navBarLinks.map((link) => (
-            <div className={"cursor-pointer link-hover-underline"}>
+          {navBarLinks.map((link, index) => (
+            <a
+              key={index}
+              href={link.link}
+              className={"font-bold text-lg link-hover-underline"}
+            >
               {link.name}
-            </div>
+            </a>
           ))}
         </div>
         <div className={"flex gap-5 items-center"}>
@@ -58,10 +62,30 @@ const NavBar = () => {
                   Pet-Plat
                 </SheetTitle>
               </SheetHeader>
-              <div className={"flex flex-col gap-8 mt-3"}>
-                {navBarLinks.map((link) => (
-                  <a className={"font-bold text-lg"}>{link.name}</a>
-                ))}
+              <div
+                className={"flex flex-col justify-between gap-8 mt-3 h-[85%]"}
+              >
+                <div className={"flex flex-col gap-8"}>
+                  {navBarLinks.map((link, index) => (
+                    <a
+                      key={index}
+                      href={link.link}
+                      className={"font-bold text-lg"}
+                    >
+                      {link.name}
+                    </a>
+                  ))}
+                </div>
+                <div className={"flex flex-col gap-6"}>
+                  <button className={cn(signButton, "w-full p-3")}>
+                    Зарегистрироваться
+                  </button>
+                  <button
+                    className={cn(signButton, "w-full p-3 text-black bg-white")}
+                  >
+                    Войти
+                  </button>
+                </div>
               </div>
             </SheetContent>
           </Sheet>
