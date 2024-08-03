@@ -1,30 +1,13 @@
-import { cn } from "@/lib/utils.ts";
-import { Calendar } from "@/components/ui/calendar.tsx";
-import { useState } from "react";
+import HowItWorksSection from "@/components/landing/how-it-works/HowItWorksSection.tsx";
+import PetProjectsSection from "@/components/landing/pet-projects/PetProjectsSection.tsx";
+import React from "react";
 
-const HomePage = () => {
-  const [date, setDate] = useState<Date | undefined>(new Date());
+
+const HomePage: React.FC<void> = () => {
   return (
-    <main className={cn("mt-20")}>
-      <section>
-        <div
-          className={
-            "flex justify-center items-center gap-16 lg:flex-row flex-col"
-          }
-        >
-          <div className="flex items-center gap-4">
-            <h2 className="scroll-m-20 border-b pb-20 tracking-tight first:mt-0 text-4xl">
-              Under construction
-            </h2>
-          </div>
-          <Calendar
-            mode="single"
-            selected={date}
-            onSelect={setDate}
-            className="rounded-md border shadow"
-          />
-        </div>
-      </section>
+    <main>
+        <PetProjectsSection className="mb-18 md:mb-30" />
+        <HowItWorksSection className="mb-18 md:mb-36" />
     </main>
   );
 };

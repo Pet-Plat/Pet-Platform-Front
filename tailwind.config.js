@@ -8,9 +8,9 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1.25rem" /* 20px */,
       screens: {
-        "2xl": "1366px",
+        "2xl": "1263px" /* yields content width of 1223px */,
       },
     },
     screens: {
@@ -21,6 +21,7 @@ export default {
       colors: {
         // project specific colors
         darkblue: "var(--darkblue)",
+        darkPurpleBlue: "var(--dark-purple-blue)",
         blue: "var(--blue)",
         purple: "var(--purple)",
         yellow: "var(--yellow)",
@@ -64,7 +65,12 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      margin: {
+        18: "4.5rem",
+        30: "7.5rem",
+      },
       fontSize: {
+        "3xl": ["1.75rem", "2.125rem"] /* 28px, 34px */,
         "4xl": ["2.375rem", "2.625rem"] /* 38px, 42px */,
       },
       transitionDuration: {
@@ -76,6 +82,31 @@ export default {
       backgroundImage: {
         "blob-gradient": "var(--blob-gradient)",
       },
+      flex: {
+        "2": "2 2 0%",
+        "3": "3 3 0%",
+        "4": "4 4 0%",
+        "5": "5 5 0%",
+      },
+      boxShadow: {
+        'pet-project-card': 'inset 0 0 68px rgba(255, 255, 255, 0.05), inset 0 4px 4px rgba(255, 255, 255, 0.15)',
+      },
+      backdropBlur: {
+        'pet-project-card': 'blur(48px)'
+      },
+      minWidth: {
+        // used for pet project cards
+        124: "31rem", /* 496px */
+      },
+      maxWidth: {
+        // used for pet project cards
+        165: "41.25rem" /* 660px */
+      },
+      minHeight: {
+        // used for pet project cards
+        106: "26.5rem", /* 424px */
+      },
+
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

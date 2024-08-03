@@ -1,0 +1,50 @@
+import React from "react";
+import HowItWorksCard from "@/components/landing/how-it-works/HowItWorksCard.tsx";
+import {cn} from "@/lib/utils.ts";
+
+
+// TODO: make props with only className generic for all components
+interface HowItWorksSectionProps {
+    className?: string;
+}
+
+const HowItWorksSection: React.FC<HowItWorksSectionProps> = ({ className }) => (
+    <div className={cn(className)}>
+        <h2 className="container mb-8">Как это работает</h2>
+
+        <div className="overflow-auto flex gap-4 px-5 lg:container lg:gap-6 lg:flex-col">
+            <div className="flex gap-4 lg:gap-6 lg:flex-1">
+                <HowItWorksCard
+                    className="md:min-w-72 lg:flex-4"
+                    title="Поиск проектов"
+                    description="Исследуйте наш каталог проектов и выберите тот, который вам интересен."
+                />
+                <HowItWorksCard
+                    className="md:min-w-72 lg:flex-2"
+                    title="Подача заявки"
+                    description="Подайте заявку на участие в одном или нескольких проектах, которые вас заинтересовали."
+                />
+                <HowItWorksCard
+                    className="md:min-w-72 lg:flex-5"
+                    title="Создание команды"
+                    description="Мы подберём единомышленников, и вы начнёте работу над проектом. Не забывайте, что вы можете пригласить своих друзей в команду!"
+                />
+            </div>
+
+            <div className="flex flex-row gap-4 lg:gap-6 lg:flex-1">
+                <HowItWorksCard
+                    className="md:min-w-72 lg:flex-1"
+                    title="Получите менторскую поддержку"
+                    description="К вашей команде будет прикреплен наставник, который поможет организовать работу и будет направять вас."
+                />
+                <HowItWorksCard
+                    className="md:min-w-72 lg:flex-1"
+                    title="Завершите проект"
+                    description="Совершенствуйте себя, завершайте проект, получайте отзывы отментора и платформы, добавляйте проект в своё портфолио иполучайте предложения о работе или аутсорсе."
+                />
+            </div>
+        </div>
+    </div>
+);
+
+export default HowItWorksSection
