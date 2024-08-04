@@ -5,19 +5,19 @@
 @layer base {
   :root {
     /* project colors */
-    --white: #FFF;
+    --white: #fff;
     --black: #000;
-    --darkblue: #0C091D;
+    --darkblue: #0c091d;
     --dark-purple-blue: #151225; /* used for pet project cards */
-    --blue: #1117B5;
-    --purple: #4F0AB1;
-    --yellow: #FFEB00;
-    --lightgreen: #8EF195;
-    --green: #67E26F;
+    --blue: #1117b5;
+    --purple: #4f0ab1;
+    --yellow: #ffeb00;
+    --lightgreen: #8ef195;
+    --green: #67e26f;
     --darkgreen: #219329;
-    --lightgray: #DFDFDF;
-    --darkgray: #ABABAB;
-    --blob-gradient: linear-gradient(135deg, #4F0AB1, #1117B5);
+    --lightgray: #dfdfdf;
+    --darkgray: #ababab;
+    --blob-gradient: linear-gradient(135deg, #4f0ab1, #1117b5);
 
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
@@ -66,15 +66,15 @@
 
 @layer base {
   @font-face {
-    font-family: 'Manrope';
-    src: url('../assets/fonts/Manrope-Bold.ttf') format('truetype');
+    font-family: "Manrope";
+    src: url("../assets/fonts/Manrope-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
   }
 
   @font-face {
-    font-family: 'Manrope';
-    src: url('../assets/fonts/Manrope-Regular.ttf') format('truetype');
+    font-family: "Manrope";
+    src: url("../assets/fonts/Manrope-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
   }
@@ -87,8 +87,45 @@
   body {
     @apply font-manrope bg-darkblue text-white text-foreground;
   }
+  html {
+    @apply scroll-smooth;
+  }
   h1,
   h2 {
-    @apply font-bold text-3xl sm:text-4xl;
+    @apply font-bold text-3xl sm:text-4xl mb-8;
+  }
+  h3 {
+    @apply font-bold lg:text-2xl text-base;
+  }
+  p {
+    @apply font-light lg:text-xl text-lg;
+  }
+  main {
+    & > section {
+      @apply mb-18 md:mb-30;
+    }
+  }
+}
+
+@layer components {
+  .link-hover-underline {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .link-hover-underline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    transition: width 0.3s ease-in-out;
+  }
+
+  .link-hover-underline:hover::after {
+    width: 100%;
   }
 }

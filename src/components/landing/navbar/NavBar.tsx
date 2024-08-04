@@ -1,0 +1,99 @@
+import { navBarLinks } from "@/data/links.ts";
+import { cn } from "@/lib/utils.ts";
+import { Menu } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/custom/sheet.landing.tsx";
+import { localizeMe } from "@/hooks/localize.ts";
+
+const NavBar = () => {
+  const signButton =
+    "border-[1px] border-white p-2 pl-5 pr-5 lg:p-6 lg:pt-3 lg:pb-3 rounded-full text-[1rem] hover:bg-[#999999] hover:border-[#999999] duration-150 hover:text-black ";
+  return (
+    <div className={"container lg:pt-12 pt-8 flex justify-between"}>
+      <div className={"flex gap-3 items-center"}>
+        <div className={"w-10 h-10 bg-green rounded-md flex justify-center"}>
+          <img
+            src={"/logo/logo.png"}
+            className={"aspect-square object-contain"}
+          />
+        </div>
+        <p className={"font-bold text-2xl"}>Pet-Plat</p>
+      </div>
+      <div className={"flex gap-5"}>
+        <div className={"lg:flex gap-5 items-center hidden"}>
+          {navBarLinks.map((link, index) => (
+            <a
+              key={index}
+              href={link.link}
+              className={"font-bold text-lg link-hover-underline"}
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
+        <div className={"flex gap-5 items-center"}>
+          <button className={cn(signButton, "hidden lg:block")}>
+            {localizeMe("Registration")}
+          </button>
+          <button className={cn(signButton, "text-black bg-white")}>
+            {localizeMe("Sign-in")}
+          </button>
+          <Sheet>
+            <SheetTrigger asChild>
+              <Menu className={"w-8 h-8 lg:hidden cursor-pointer"} />
+            </SheetTrigger>
+            <SheetContent side="top">
+              <SheetHeader>
+                <SheetTitle className={"flex gap-3 items-center"}>
+                  <div
+                    className={
+                      "w-12 h-12 bg-green rounded-lg flex justify-center"
+                    }
+                  >
+                    <img
+                      src={"/logo/logo.png"}
+                      className={"aspect-square object-contain"}
+                    />
+                  </div>
+                  Pet-Plat
+                </SheetTitle>
+              </SheetHeader>
+              <div
+                className={"flex flex-col justify-between gap-8 mt-3 h-[85%]"}
+              >
+                <div className={"flex flex-col gap-8"}>
+                  {navBarLinks.map((link, index) => (
+                    <a
+                      key={index}
+                      href={link.link}
+                      className={"font-bold text-lg"}
+                    >
+                      {link.name}
+                    </a>
+                  ))}
+                </div>
+                <div className={"flex flex-col gap-6"}>
+                  <button className={cn(signButton, "w-full p-3")}>
+                    {localizeMe("Registration")}
+                  </button>
+                  <button
+                    className={cn(signButton, "w-full p-3 text-black bg-white")}
+                  >
+                    {localizeMe("Sign-in")}
+                  </button>
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default NavBar;

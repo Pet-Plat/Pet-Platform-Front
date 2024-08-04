@@ -13,7 +13,7 @@ const buttonVariants = cva(
       variant: {
         default: cn(
           "bg-green hover:bg-darkgreen active:bg-lightgreen",
-          "text-darkblue  duration-1 rounded-full px-4 py-[9.5px]",
+          "text-darkblue duration-1 rounded-full px-4 py-[9.5px]",
           "max-w-[335px] w-full md:max-w-none md:w-auto",
         ),
         // TODO: re-style other variants
@@ -46,7 +46,7 @@ export interface ButtonProps
   asChild?: boolean;
 }
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+const MainButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
     return (
@@ -58,6 +58,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     );
   },
 );
-Button.displayName = "Button";
+MainButton.displayName = "MainButton";
 
-export { Button, buttonVariants };
+export { MainButton, buttonVariants };
